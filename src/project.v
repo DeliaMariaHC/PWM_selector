@@ -17,7 +17,6 @@ module tt_um_example (
 );
 
     PWM_module C1 (.clock(clk), .enable(ui_in[3]), .speed[2:0](ui_in[2:0]), .PWM(uo_out[0]));
-  );
 
   // All output pins must be assigned. If not used, assign to 0.
     assign uio_oe[7:0]  = 8'b11111111; // bidireccionales como salida
