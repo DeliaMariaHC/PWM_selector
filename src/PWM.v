@@ -5,7 +5,7 @@
 // Author      : Julio
 // Company     : SiCI
 
-module PWM_module (
+module PWM (
   input  wire       clock,
   input  wire       enable,        
   input  wire [2:0] speed,
@@ -46,3 +46,4 @@ module PWM_module (
 
   assign PWM = temp_PWM;
 endmodule
+
