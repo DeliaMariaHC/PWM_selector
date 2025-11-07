@@ -1,10 +1,3 @@
-//-----------------------------------------------------------------------------
-//
-// Title       : PWM
-// Design      : PWM_design
-// Author      : Julio
-// Company     : SiCI
-
 module PWM (
   input  wire       clock,
   input  wire       enable,        
@@ -46,4 +39,5 @@ module PWM (
 
   assign PWM = temp_PWM;
 endmodule
+
 
