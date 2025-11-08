@@ -19,12 +19,12 @@ module tt_um_PWM (
     PWM C1 (.clock(ui_in[4]), .enable(ui_in[3]), .speed[2:0](ui_in[2:0]), .PWM(uo_out[0]));
 
   // All output pins must be assigned. If not used, assign to 0.
-    assign uio_oe[7:0]  = 8'b11111111; // bidireccionales como salida
-    assign uio_out[7:0] = 8'b00000000; // salidas a cero
+    assign uio_oe = 0; 
+    assign uio_out = 0; 
     assign uo_out[7:1] = 7'b0000000; // salidas restantes a cero
   
 
   // List all unused inputs to prevent warnings
-    wire _unused = &{ena, clk, rst_n, 1'b0};
+    wire _unused = &{uio_in[7:0],ui_in[7:4], ena, clk, rst_n, 1'b0};
 
 endmodule
