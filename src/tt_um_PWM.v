@@ -16,7 +16,11 @@ module tt_um_PWM (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    PWM C1 (.clock(ui_in[4]), .enable(ui_in[3]), .speed[2:0](ui_in[2:0]), .PWM(uo_out[0]));
+    PWM C1 (
+        .clock(ui_in[4]), 
+        .enable(ui_in[3]), 
+        .speed(ui_in[2:0]), 
+        .PWM(uo_out[0]));
 
   // All output pins must be assigned. If not used, assign to 0.
     assign uio_oe = 0; 
@@ -25,6 +29,6 @@ module tt_um_PWM (
   
 
   // List all unused inputs to prevent warnings
-    wire _unused = &{uio_in[7:0],ui_in[7:4], ena, clk, rst_n, 1'b0};
+    wire _unused = &{uio_in[7:0], ui_in[7:5], ena, clk, rst_n, 1'b0};
 
 endmodule
