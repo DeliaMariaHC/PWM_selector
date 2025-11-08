@@ -1,8 +1,6 @@
-# test/test_dummy.py
 import cocotb
 
 @cocotb.test()
 async def dummy_test(dut):
-    """test"""
+    """Prueba vacía para pasar el flujo de Tiny Tapeout sin simulación real"""
     assert True
-
